@@ -6,7 +6,6 @@ function Soldier (name){
     this._stdXp = 250
 }
 
-//Soldier.prototype.__proto__ = Unit.prototype
 Soldier.prototype = Object.create(Unit.prototype)
 Soldier.prototype.handAttack = function(unit){
     if (!this.isAlive()) console.log(this.getName() + 'Is Dead!')
