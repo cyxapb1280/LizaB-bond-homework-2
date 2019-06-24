@@ -6,7 +6,6 @@ function Doctor (name){
     this._stdXp = 250
 }
 
-//Doctor.prototype.__proto__ = Unit.prototype
 Doctor.prototype = Object.create(Unit.prototype)
 
 Doctor.prototype.heal = function(unit){
