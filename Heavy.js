@@ -6,8 +6,8 @@ function Heavy (name){
     this._stdXp = 250
 }
 
-//Heavy.prototype.__proto__ = Soldier.prototype
 Heavy.prototype = Object.create(Soldier.prototype)
+
 Heavy.prototype.machineGunAttack = function(unit, amountOfShots){
     if (!this.isAlive()) console.log(this.getName() + 'Is Dead!')
     dmg = 0
