@@ -14,7 +14,7 @@ Heavy.prototype.machineGunAttack = function(unit, amountOfShots){
     if(unit.isAlive()){
         dmg = Math.round(this._attackPower*this.getLevel()*0.1*amountOfShots)
         unit.takeDamage(dmg)
-        this._earnExperiance(this._stdXp/this.getLevel()*0.1)
+        this._earnExperience(this._stdXp/this.getLevel()*0.1)
     }
     return dmg
 }
@@ -24,7 +24,7 @@ Heavy.prototype.takeDamage = function(amount){
     this._health -= Math.round(amount)
     if(this._health < 0) this._health = 0
 
-    if (this.isAlive()) this._earnExperiance(this._XP_FOR_DAMAGE)
+    if (this.isAlive()) this._earnExperience(this._XP_FOR_DAMAGE)
 }
 
 module.exports = Heavy

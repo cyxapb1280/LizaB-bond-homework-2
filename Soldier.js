@@ -13,7 +13,7 @@ Soldier.prototype.handAttack = function(unit){
     if(unit.isAlive()){
         dmg = Math.round(this._attackPower*this.getLevel()*0.1)
         unit.takeDamage(dmg)
-        this._earnExperiance(this._stdXp/this.getLevel()*0.1)
+        this._earnExperience(this._stdXp/this.getLevel()*0.1)
     }
     return dmg
 }

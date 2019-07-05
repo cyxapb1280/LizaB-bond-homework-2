@@ -15,7 +15,7 @@ Doctor.prototype.heal = function(unit){
     if(unit.isAlive()){
         healed = Math.round(this._healPower*this.getLevel()*0.1)
         unit.addHealth(healed)
-        this._earnExperiance(this._stdXp/this.getLevel()*0.1)
+        this._earnExperience(this._stdXp/this.getLevel()*0.1)
     }
     return healed
 }
